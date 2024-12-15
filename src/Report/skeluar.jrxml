@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e87f68a-f655-4727-96d2-2955a3fb8bba">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     surat_keluar.`id` AS surat_keluar_id,
+     surat_keluar.`no_surat` AS surat_keluar_no_surat,
+     surat_keluar.`user_id` AS surat_keluar_user_id,
+     surat_keluar.`isi_perihal` AS surat_keluar_isi_perihal,
+     surat_keluar.`nama_pemohon` AS surat_keluar_nama_pemohon,
+     surat_keluar.`Ditujukan_Kepada` AS surat_keluar_Ditujukan_Kepada,
+     surat_keluar.`Jenis_Surat` AS surat_keluar_Jenis_Surat,
+     surat_keluar.`tanggal` AS surat_keluar_tanggal,
+     surat_keluar.`pejabat_bertanda_tangan` AS surat_keluar_pejabat_bertanda_tangan,
+     surat_keluar.`nama_pejabat` AS surat_keluar_nama_pejabat,
+     surat_keluar.`masa_Berakhir_Surat` AS surat_keluar_masa_Berakhir_Surat,
+     surat_keluar.`keterangan` AS surat_keluar_keterangan,
+     surat_keluar.`status` AS surat_keluar_status
+FROM
+     `surat_keluar` surat_keluar]]>
+	</queryString>
+	<field name="surat_keluar_id" class="java.lang.Integer"/>
+	<field name="surat_keluar_no_surat" class="java.lang.String"/>
+	<field name="surat_keluar_user_id" class="java.lang.Integer"/>
+	<field name="surat_keluar_isi_perihal" class="java.lang.String"/>
+	<field name="surat_keluar_nama_pemohon" class="java.lang.String"/>
+	<field name="surat_keluar_Ditujukan_Kepada" class="java.lang.String"/>
+	<field name="surat_keluar_Jenis_Surat" class="java.lang.String"/>
+	<field name="surat_keluar_tanggal" class="java.sql.Date"/>
+	<field name="surat_keluar_pejabat_bertanda_tangan" class="java.lang.String"/>
+	<field name="surat_keluar_nama_pejabat" class="java.lang.String"/>
+	<field name="surat_keluar_masa_Berakhir_Surat" class="java.sql.Date"/>
+	<field name="surat_keluar_keterangan" class="java.lang.String"/>
+	<field name="surat_keluar_status" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<staticText>
+				<reportElement x="86" y="17" width="385" height="38" uuid="e2b10ce8-bd5f-4741-9a47-30cbc392bb1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SURAT KELUAR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="14cc23cb-7b6e-4eb1-b733-b3b28f44f957"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="ee8e1be5-95a2-4850-9166-2957a98ef0f9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO SURAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="618b46eb-3209-41d9-844e-9031b9102446"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="b09b721f-86c7-49ef-a390-3b66b0f7fb14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISI/PRIHAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="2b5b9d96-4d71-4a54-ba3a-d8dcaaf08a08"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TUJUAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="16569e4d-3838-4e88-9f4a-82d53a0f34be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KETERANGAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="9a7ef1be-3243-415e-8913-f7dc8b0ab796"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="bea17531-bd22-4ffd-b0d0-f61ae24842e5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surat_keluar_no_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="6aaa85a3-0faa-43d5-b77d-96c76fa82450"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surat_keluar_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="fe6f9f08-ad41-493c-8ef4-5bf9ba2fa4c8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surat_keluar_isi_prihal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="dfdec51b-cd50-4e5f-912e-8585d4fc4463"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surat_keluar_tujuan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="5b28c98c-06c5-4668-b2e2-c6b627e57d4b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surat_keluar_Ditujukan_Kepada}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="79c98e73-d2a7-4352-a986-b490e5a6b644"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="3d565739-100a-48c3-8d70-d91d9d6f57fb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="da9acb3c-ff03-45ea-8e5e-e3e2363db9fb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
