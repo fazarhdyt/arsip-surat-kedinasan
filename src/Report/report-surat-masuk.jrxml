@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8ac7bf05-03f7-4a4c-8969-c9459ae434bb">
+	<property name="ireport.zoom" value="1.2100000000000053"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     surat_masuk.`id` AS surat_masuk_id,
+     surat_masuk.`no_surat` AS surat_masuk_no_surat,
+     surat_masuk.`jenis_surat` AS surat_masuk_jenis_surat,
+     surat_masuk.`tanggal_surat` AS surat_masuk_tanggal_surat,
+     surat_masuk.`tanggal_terima` AS surat_masuk_tanggal_terima,
+     surat_masuk.`asal_surat` AS surat_masuk_asal_surat,
+     surat_masuk.`tujukan_kepada` AS surat_masuk_tujukan_kepada,
+     surat_masuk.`lampiran` AS surat_masuk_lampiran,
+     surat_masuk.`pejabat_tangan` AS surat_masuk_pejabat_tangan,
+     surat_masuk.`nama_pejabat` AS surat_masuk_nama_pejabat,
+     surat_masuk.`tindakan` AS surat_masuk_tindakan,
+     surat_masuk.`status` AS surat_masuk_status,
+     surat_masuk.`keterangan` AS surat_masuk_keterangan
+FROM
+     `surat_masuk` surat_masuk]]>
+	</queryString>
+	<field name="surat_masuk_no_surat" class="java.lang.String"/>
+	<field name="surat_masuk_jenis_surat" class="java.lang.String"/>
+	<field name="surat_masuk_tanggal_surat" class="java.sql.Date"/>
+	<field name="surat_masuk_tanggal_terima" class="java.sql.Date"/>
+	<field name="surat_masuk_asal_surat" class="java.lang.String"/>
+	<field name="surat_masuk_tujukan_kepada" class="java.lang.String"/>
+	<field name="surat_masuk_lampiran" class="java.lang.String"/>
+	<field name="surat_masuk_pejabat_tangan" class="java.lang.String"/>
+	<field name="surat_masuk_nama_pejabat" class="java.lang.String"/>
+	<field name="surat_masuk_tindakan" class="java.lang.String"/>
+	<field name="surat_masuk_status" class="java.lang.String"/>
+	<field name="surat_masuk_keterangan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="459" y="0" width="85" height="70" uuid="fb0db768-7a9b-4988-b244-a4027213732a"/>
+				<imageExpression><![CDATA["C:\\Users\\Fazar\\Documents\\Kuliah\\Semester 7\\KKP\\asset\\Lambang_smpn 33 Depok.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="210" y="65" width="154" height="14" uuid="d61f94c0-8f22-4f95-b931-1d71e6ef8f4a"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[email: smpn33depok@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="13" width="118" height="14" uuid="fc7ab8f3-8126-4659-a290-19446053d1ef"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DINAS PENDIDIKAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="26" width="176" height="14" uuid="9075fffe-6d3a-4de5-9d15-b7ec09368cc0"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UPTD SMP NEGERI 33 DEPOK]]></text>
+			</staticText>
+			<image>
+				<reportElement x="40" y="0" width="85" height="70" uuid="041786b1-5f94-4d72-9bac-25f5be559915"/>
+				<imageExpression><![CDATA["C:\\Users\\Fazar\\Documents\\Kuliah\\Semester 7\\KKP\\asset\\Lambang_Kota_Depok.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="137" y="40" width="300" height="14" uuid="fc882aa1-3461-4b5a-abcf-d139ea4d88b5"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jln. Barito Raya Depok Timur-Baktijaya-Sukmajaya Depok - 16418]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="52" width="174" height="14" uuid="c2665c54-3473-4e06-87d2-36f1c267383a"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Telp. 021-276117757 NPSN: 70011267]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="0" width="169" height="14" uuid="a7ea7998-898d-4718-958d-627f2745288c"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KOTA DEPOK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" uuid="c6216bea-7156-4d39-b0da-a2a0397597f0"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="0" width="214" height="20" uuid="13334446-fcd6-4dfa-bec1-b9568f74be20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SURAT MASUK]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="353" y="47" width="79" height="14" uuid="b583332c-eb9f-4ed4-a941-459d66dc2c94"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="263" y="47" width="90" height="14" uuid="a14b8c1a-f65c-4974-8b4f-9c10f50542b6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="432" y="47" width="68" height="14" uuid="297d8cff-20e0-41ed-a8e2-986bdec7b027"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="129" y="47" width="76" height="14" uuid="170b695f-9a97-4d34-becf-6e87433e2af9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="47" width="130" height="14" uuid="3c511887-55fc-4072-92b0-a94da5378632"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="205" y="47" width="58" height="14" uuid="55f98362-efa1-4a8b-82f0-a07c7df26818"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="499" y="47" width="56" height="14" uuid="e5517b3d-9082-440c-8632-66a8712acb49"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="47" width="130" height="14" uuid="b4a58a0f-2c8a-4622-9255-458a1abbb7b3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[No. Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="47" width="76" height="14" uuid="fadaf76b-4160-4507-b943-1b5d9136e83c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="47" width="56" height="14" uuid="8a534812-7162-457e-aee9-4548d39addbc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="47" width="90" height="14" uuid="10747d77-5c30-46c7-ad4e-37aaa1ae68f4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Ditujukan Kepada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="47" width="58" height="14" uuid="63ad15ce-6d71-48dc-bb0d-85214dc1a3f0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Asal Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="47" width="68" height="14" uuid="210b56fc-6bf7-4437-a780-2fd73c2107e2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tindakan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="47" width="79" height="14" uuid="d93f1790-4ea7-472a-bb93-be0da41b8aa7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Terima]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<rectangle>
+				<reportElement x="353" y="0" width="79" height="14" uuid="89aaa1c8-acc8-4414-9a14-54d892267e94"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="263" y="0" width="90" height="14" uuid="b8cb214f-9446-44bf-83ae-d7d9c6405568"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="432" y="0" width="68" height="14" uuid="2853f484-729c-44e5-829b-06e1e602c140"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="129" y="0" width="76" height="14" uuid="f20a6e92-9346-41a2-940d-853360b78eca"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="130" height="14" uuid="d655338c-17ad-4bd5-bdae-74f44fac92ab"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="205" y="0" width="58" height="14" uuid="e9cf7c12-5fda-484c-ada6-dd6efbef03e8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="499" y="0" width="56" height="14" uuid="56cbbd77-7d9e-4d61-8acb-62c5aa03cb9d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="130" height="14" uuid="286c1212-397e-4320-9293-ad6301b861c8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_no_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="0" width="76" height="14" uuid="bfbfd89a-c378-4807-a47d-f9413a0808ec"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_jenis_surat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="353" y="0" width="78" height="14" uuid="112f110d-efc0-475e-a17f-13a0221509e0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_tanggal_terima}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="0" width="58" height="14" uuid="0ee6a965-9382-4ed4-bcef-69ed501a9948"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_asal_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="0" width="90" height="14" uuid="98eb5dd0-66bf-477e-84db-8a3b4eef8a76"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_tujukan_kepada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="0" width="68" height="14" uuid="976dd016-a18b-4657-819d-f45eb6572064"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_tindakan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="499" y="0" width="56" height="14" uuid="de89523a-8994-418f-b6d3-4408eae0b87f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_masuk_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="14" width="155" height="14" uuid="a1cad94f-73f1-4c5c-8f69-0439845b198f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kepala UPTD SMPN 33 Depok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="37" height="15" uuid="511cfb77-9eec-407b-908b-ebf27cfe8b20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Depok, ]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="437" y="0" width="118" height="15" uuid="d52ef038-d135-4dfa-8802-54894fede73a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="40" width="155" height="14" uuid="2f3659f3-46dc-4a22-b4ca-9566a356fe0c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NIP. XXXXXXXXXXXX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="27" width="155" height="14" uuid="91635244-ae1f-4381-97f6-451412a99583"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Haryanto, M.Pd.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
