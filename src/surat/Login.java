@@ -38,14 +38,17 @@ public class Login extends javax.swing.JFrame {
             res = stat.executeQuery(sql);
             if(res.next()) {
                 if(t_username.getText().equals(res.getString("username")) && t_password.getText().equals(res.getString("password")) && j_level.getSelectedIndex() == (res.getInt("level_id"))) {
-                    JOptionPane.showMessageDialog(null, "Login success");
-                    new menu_utama().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Berhasil masuk!");
+                    menu_utama x = new menu_utama();
+                    x.user_id = res.getInt("id");
+                    x.role = res.getInt("level_id");
+                    x.setVisible(true);
                     dispose();
                 } else {
-                    JOptionPane.showMessageDialog(null, "Incorrect username or password");
+                    JOptionPane.showMessageDialog(null, "nama pengguna atau kata sandi salah!");
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Incorrect username or password");
+                JOptionPane.showMessageDialog(null, "name pengguna atau kata sandi salah!");
             }
         } catch(Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -98,11 +101,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 30, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Username");
+        jLabel3.setText("Nama Pengguna");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 270, 20));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Password");
+        jLabel4.setText("Kata Sandi");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 270, 20));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png/Secure.png"))); // NOI18N
