@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3471319-a499-4394-8e5b-e0ba3fa1bf13">
+	<property name="ireport.zoom" value="1.2100000000000162"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="surat_kelar" uuid="f0321de6-98ef-41fa-b763-4556306935b9">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     surat_keluar.`id` AS surat_keluar_id,
+     surat_keluar.`no_surat` AS surat_keluar_no_surat,
+     surat_keluar.`user_id` AS surat_keluar_user_id,
+     surat_keluar.`isi_perihal` AS surat_keluar_isi_perihal,
+     surat_keluar.`nama_pemohon` AS surat_keluar_nama_pemohon,
+     surat_keluar.`Ditujukan_Kepada` AS surat_keluar_Ditujukan_Kepada,
+     surat_keluar.`Jenis_Surat` AS surat_keluar_Jenis_Surat,
+     surat_keluar.`tanggal` AS surat_keluar_tanggal,
+     surat_keluar.`pejabat_bertanda_tangan` AS surat_keluar_pejabat_bertanda_tangan,
+     surat_keluar.`nama_pejabat` AS surat_keluar_nama_pejabat,
+     surat_keluar.`masa_Berakhir_Surat` AS surat_keluar_masa_Berakhir_Surat,
+     surat_keluar.`keterangan` AS surat_keluar_keterangan,
+     surat_keluar.`status` AS surat_keluar_status,
+     surat_keluar.`asal` AS surat_keluar_asal
+FROM
+     `surat_keluar` surat_keluar]]>
+		</queryString>
+		<field name="surat_keluar_user_id" class="java.lang.Integer"/>
+		<field name="surat_keluar_isi_perihal" class="java.lang.String"/>
+		<field name="surat_keluar_nama_pemohon" class="java.lang.String"/>
+		<field name="surat_keluar_Ditujukan_Kepada" class="java.lang.String"/>
+		<field name="surat_keluar_Jenis_Surat" class="java.lang.String"/>
+		<field name="surat_keluar_tanggal" class="java.sql.Date"/>
+		<field name="surat_keluar_pejabat_bertanda_tangan" class="java.lang.String"/>
+		<field name="surat_keluar_nama_pejabat" class="java.lang.String"/>
+		<field name="surat_keluar_masa_Berakhir_Surat" class="java.sql.Date"/>
+		<field name="surat_keluar_keterangan" class="java.lang.String"/>
+		<field name="surat_keluar_status" class="java.lang.String"/>
+		<field name="surat_keluar_asal" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     surat_keluar.`id` AS surat_keluar_id,
+     surat_keluar.`no_surat` AS surat_keluar_no_surat,
+     surat_keluar.`user_id` AS surat_keluar_user_id,
+     surat_keluar.`isi_perihal` AS surat_keluar_isi_perihal,
+     surat_keluar.`nama_pemohon` AS surat_keluar_nama_pemohon,
+     surat_keluar.`Ditujukan_Kepada` AS surat_keluar_Ditujukan_Kepada,
+     surat_keluar.`Jenis_Surat` AS surat_keluar_Jenis_Surat,
+     surat_keluar.`tanggal` AS surat_keluar_tanggal,
+     surat_keluar.`pejabat_bertanda_tangan` AS surat_keluar_pejabat_bertanda_tangan,
+     surat_keluar.`nama_pejabat` AS surat_keluar_nama_pejabat,
+     surat_keluar.`masa_Berakhir_Surat` AS surat_keluar_masa_Berakhir_Surat,
+     surat_keluar.`keterangan` AS surat_keluar_keterangan,
+     surat_keluar.`status` AS surat_keluar_status,
+     surat_keluar.`asal` AS surat_keluar_asal
+FROM
+     `surat_keluar` surat_keluar]]>
+	</queryString>
+	<field name="surat_keluar_no_surat" class="java.lang.String"/>
+	<field name="surat_keluar_isi_perihal" class="java.lang.String"/>
+	<field name="surat_keluar_nama_pemohon" class="java.lang.String"/>
+	<field name="surat_keluar_Ditujukan_Kepada" class="java.lang.String"/>
+	<field name="surat_keluar_Jenis_Surat" class="java.lang.String"/>
+	<field name="surat_keluar_tanggal" class="java.sql.Date"/>
+	<field name="surat_keluar_pejabat_bertanda_tangan" class="java.lang.String"/>
+	<field name="surat_keluar_nama_pejabat" class="java.lang.String"/>
+	<field name="surat_keluar_masa_Berakhir_Surat" class="java.sql.Date"/>
+	<field name="surat_keluar_keterangan" class="java.lang.String"/>
+	<field name="surat_keluar_status" class="java.lang.String"/>
+	<field name="surat_keluar_asal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="40" width="300" height="14" uuid="025f1b93-0f73-44ab-bee9-8cea9c9ce1dd"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jln. Barito Raya Depok Timur-Baktijaya-Sukmajaya Depok - 16418]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="65" width="154" height="14" uuid="256ae081-d27a-4b35-bdd6-40cbea7dc781"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[email: smpn33depok@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="13" width="118" height="14" uuid="5f906335-c1b3-4a8d-928b-d648a78b3607"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DINAS PENDIDIKAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="26" width="176" height="14" uuid="0304f209-ab96-4db8-b13a-6f2e4900e4ec"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UPTD SMP NEGERI 33 DEPOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="52" width="174" height="14" uuid="17eef821-a055-4083-8bc2-616c8242fe4f"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Telp. 021-276117757 NPSN: 70011267]]></text>
+			</staticText>
+			<image>
+				<reportElement x="34" y="0" width="85" height="70" uuid="0906f067-0b4f-44af-8b31-00d01be0dce5"/>
+				<imageExpression><![CDATA["C:\\Users\\Fazar\\Documents\\Kuliah\\Semester 7\\KKP\\asset\\Lambang_Kota_Depok.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="200" y="0" width="169" height="14" uuid="de510f2f-9382-40ed-8221-1974061fac53"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KOTA DEPOK]]></text>
+			</staticText>
+			<image>
+				<reportElement x="453" y="0" width="85" height="70" uuid="6db381ab-7313-41da-b1c0-d53ef085720a"/>
+				<imageExpression><![CDATA["C:\\Users\\Fazar\\Documents\\Kuliah\\Semester 7\\KKP\\asset\\Lambang_smpn 33 Depok.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" uuid="be40a0aa-2623-4393-a673-74b82e780731"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="499" y="47" width="56" height="14" uuid="bbfe14af-8266-4da4-9d8f-7edf0e9508d3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="432" y="47" width="68" height="14" uuid="0258a0bc-3240-4a89-851e-3167268cae39"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="346" y="47" width="88" height="14" uuid="01e54bfb-0d9e-4087-a9e0-89d8554f284e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="262" y="47" width="84" height="14" uuid="381223cc-3d9c-4f30-a4fd-dfa5370ba67c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="197" y="47" width="66" height="14" uuid="5f5ae2ad-4664-47e6-9183-bf04a1815e1d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="129" y="47" width="70" height="14" uuid="7e97611d-44a4-4d7b-8cfe-480eab7fbb5c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="47" width="130" height="14" uuid="2a8e9083-ae2a-4418-bb85-df044c9717ae"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="170" y="0" width="214" height="20" uuid="755cffe5-a936-477c-922f-8a77ee6ea6b6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SURAT KELUAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="130" height="14" uuid="b7289f85-1c1d-41cb-a6c7-676f20584206"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[No. Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="47" width="70" height="14" uuid="e1a2329a-316b-4ed6-ad79-5091e0287b34"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="47" width="84" height="14" uuid="28904661-7a07-4d90-aa2c-3aa006d51f72"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Pemohon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="47" width="88" height="14" uuid="f264c0f8-7e74-438a-8c1f-8796dcfdc582"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Ditujukan kepada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="47" width="68" height="14" uuid="3e7defeb-ec9f-4492-9fd8-0c35e1e59d7f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="47" width="55" height="14" uuid="e34550c9-1da8-42cb-b05b-52eb2d39f11f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="47" width="55" height="14" uuid="e34550c9-1da8-42cb-b05b-52eb2d39f11f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="47" width="66" height="14" uuid="31d64c64-824d-410f-944f-ba9fda0711f4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Asal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="130" height="14" uuid="ef8bd37d-275a-4f77-ae14-f0d9eb1e4da7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="499" y="0" width="56" height="14" uuid="9ef01ee2-817e-4273-80df-43f20dbb117a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="432" y="0" width="68" height="14" uuid="251f6856-0ea1-4710-b723-3c8f06232e8f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="346" y="0" width="88" height="14" uuid="18fe1499-1f1d-46e8-8738-52447b18860b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="262" y="0" width="84" height="14" uuid="292b9c0a-e938-4637-9efd-ea16f35d81b2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="197" y="0" width="66" height="14" uuid="88157dd0-2f27-455d-8cc3-db4fdb48bcc4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="130" y="0" width="69" height="14" uuid="159ff346-5e06-4962-93a8-e8115e754b33"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="1" width="130" height="13" uuid="11149eca-7fb3-4914-9e22-1cd57297b53e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_no_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="1" width="70" height="13" uuid="7b0223d6-b218-4cb8-8368-dbedaddc9f42"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_Jenis_Surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="1" width="82" height="13" uuid="7e49e09a-2674-4462-96a1-038f2c33079c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_nama_pemohon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="1" width="88" height="13" uuid="2a98a5e0-c224-46e8-aac6-94bbb1c90df8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_Ditujukan_Kepada}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="434" y="1" width="66" height="13" uuid="59edde53-65b7-42cc-80b4-8acfdbb1e4c5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="1" width="64" height="13" uuid="da30e7ae-cdf6-4c5c-87a3-1d602b9b67aa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_asal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="1" width="55" height="13" uuid="48fa0da0-dacb-4d9c-be87-d1df349ffb95"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{surat_keluar_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="0" width="37" height="15" uuid="0e2da6b0-2259-44f6-b22a-cf0e9705edfe"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Depok, ]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="437" y="0" width="118" height="15" uuid="ffe26c5b-2ee6-458d-a2d1-70913f23659a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="14" width="155" height="14" uuid="51188587-9d36-49cf-ad45-2a886f751f28"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kepala UPTD SMPN 33 Depok]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="27" width="155" height="14" uuid="85a44838-e097-4773-b059-1ce0536cde16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Haryanto, M.Pd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="40" width="155" height="14" uuid="56107a2f-6ae2-44f1-9ad1-b8a735f2747e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NIP. XXXXXXXXXXXX]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
