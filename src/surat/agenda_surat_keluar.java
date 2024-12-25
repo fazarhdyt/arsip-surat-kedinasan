@@ -27,6 +27,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         datatable();
         this.setLocationRelativeTo(null);
         no.setEnabled(false);
+//        btnDisposisi.setEnabled(!no.getText().equalsIgnoreCase(""));
     }
        public void datatable()
        {
@@ -42,8 +43,8 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         tbl.addColumn("Nama_Pejabat");
         tbl.addColumn("Masa_Berakhir_Surat");
         tbl.addColumn("Keterangan");
-        tbl.addColumn("Status");
         tbl.addColumn("Asal");
+        tbl.addColumn("Status");
         jTable1.setModel(tbl);
         
         try {
@@ -62,8 +63,8 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
                 res.getString("nama_pejabat"),
                 res.getString("masa_Berakhir_Surat"),
                 res.getString("keterangan"),
-                res.getString("status"),
                 res.getString("asal"),
+                res.getString("status"),
                 }); 
             }
         }catch (Exception e){
@@ -116,6 +117,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         no = new javax.swing.JTextField();
         asal = new javax.swing.JComboBox<>();
+        btnDisposisi = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -181,7 +183,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         });
 
         isi.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        isi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih", "Biasa", "Undangan", "Pengantar", "Rahasia", "Arsip" }));
+        isi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Biasa", "Undangan", "Pengantar", "Rahasia", "Arsip" }));
         isi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 isiActionPerformed(evt);
@@ -192,7 +194,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         jLabel9.setText("Status");
 
         stat.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        stat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BARU", "PROSES", "SELESAI", " " }));
+        stat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BARU", "PROSES", "SELESAI" }));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel10.setText("ID Pegawai");
@@ -265,7 +267,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         });
 
         jenis.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih", "Keterangan", "Undangan", "Pemberitahuan", "Keuangan", "Kedinasan", "Tugas" }));
+        jenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keterangan", "Undangan", "Pemberitahuan", "Keuangan", "Kedinasan", "Tugas" }));
         jenis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jenisActionPerformed(evt);
@@ -278,7 +280,14 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         no.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         asal.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih", "Keuangan", "Kepegawaian", "Kurikulum", "Kesiswaan", "Umum" }));
+        asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keuangan", "Kepegawaian", "Kurikulum", "Kesiswaan", "Umum" }));
+
+        btnDisposisi.setText("Disposisi");
+        btnDisposisi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDisposisiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -300,37 +309,33 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
                             .addComponent(jLabel14)
                             .addComponent(jLabel15))
                         .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(nama_pemohon, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                            .addComponent(id, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Ket, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ditujukan)
+                            .addComponent(Pejabat)
+                            .addComponent(Napejabat)
+                            .addComponent(asal, javax.swing.GroupLayout.Alignment.LEADING, 0, 163, Short.MAX_VALUE)
+                            .addComponent(isi, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(nama_pemohon, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                                    .addComponent(id, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Ket, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ditujukan)
-                                    .addComponent(Pejabat)
-                                    .addComponent(Napejabat)
-                                    .addComponent(asal, javax.swing.GroupLayout.Alignment.LEADING, 0, 163, Short.MAX_VALUE)
-                                    .addComponent(isi, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(28, 28, 28)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel9))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(stat, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tgl2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tgl, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(70, 70, 70))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel16)
-                                            .addComponent(jButton7))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tgl2, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                                    .addComponent(tgl, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                                    .addComponent(stat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(70, 70, 70))
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jenis, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jButton7))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -347,7 +352,9 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(no, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnDisposisi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(no, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))))
                         .addContainerGap())))
         );
         jPanel3Layout.setVerticalGroup(
@@ -397,8 +404,10 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
-                    .addComponent(Napejabat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Napejabat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDisposisi)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jButton1)
@@ -529,7 +538,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(512, 512, 512)
                 .addComponent(jLabel8)
-                .addContainerGap(551, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -613,7 +622,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
        dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void simpanSuratMasuk() {
+    private void simpanSuratKeluar() {
         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal = String.valueOf(fmt.format(tgl.getDate()));
         String masaSurat = String.valueOf(fmt.format(tgl2.getDate()));
@@ -706,7 +715,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         datatable();   
     }
     
-    private void ubahSuratMasuk() {
+    private void ubahSuratKeluar() {
         try {
             SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
             String tanggal = String.valueOf(fmt.format(tgl.getDate()));
@@ -737,9 +746,9 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(no.getText() == null || no.getText().equalsIgnoreCase("")) {
-            simpanSuratMasuk();
+            simpanSuratKeluar();
         }else {
-            ubahSuratMasuk();
+            ubahSuratKeluar();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -862,8 +871,8 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         Pejabat.setText(jTable1.getValueAt(tabel, 7).toString());
         Napejabat.setText(jTable1.getValueAt(tabel, 8).toString());
         Ket.setText(jTable1.getValueAt(tabel, 10).toString());
-        stat.setSelectedItem(jTable1.getValueAt(tabel, 11).toString());
-        asal.setSelectedItem(jTable1.getValueAt(tabel, 12).toString());
+        asal.setSelectedItem(jTable1.getValueAt(tabel, 11).toString());
+        stat.setSelectedItem(jTable1.getValueAt(tabel, 12).toString());
         try {
             String tglSurat = jTable1.getValueAt(tabel, 6).toString();
             String tglMasaSurat = jTable1.getValueAt(tabel, 9).toString();
@@ -907,6 +916,16 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jenisActionPerformed
 
+    private void btnDisposisiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisposisiActionPerformed
+        Disposisi x = new Disposisi();
+        x.noSurat.setText(no.getText());
+        x.isiPrihal.setText(isi.getSelectedItem().toString());
+        x.jenisSurat.setText(jenis.getSelectedItem().toString());
+        x.tanggal.setDate(tgl.getDate());
+        x.pendisposisian.setText("keluar");
+        x.show();
+    }//GEN-LAST:event_btnDisposisiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -947,6 +966,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
     private javax.swing.JTextField Napejabat;
     private javax.swing.JTextField Pejabat;
     private javax.swing.JComboBox<String> asal;
+    private javax.swing.JButton btnDisposisi;
     private javax.swing.JTextField ditujukan;
     private javax.swing.JTextField id;
     private javax.swing.JComboBox<String> isi;
@@ -984,7 +1004,7 @@ public class agenda_surat_keluar extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JComboBox<String> jenis;
     private javax.swing.JTextField nama_pemohon;
-    private javax.swing.JTextField no;
+    public javax.swing.JTextField no;
     private javax.swing.JTextField no1;
     private javax.swing.JComboBox<String> stat;
     private com.toedter.calendar.JDateChooser tgl;
